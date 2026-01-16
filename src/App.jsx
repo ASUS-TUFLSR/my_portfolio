@@ -1,8 +1,13 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='text-4xl' >App</div>
+    <>
+      <BrowserRouter>
+       
+      </BrowserRouter>
+    </>
   )
 }
 
