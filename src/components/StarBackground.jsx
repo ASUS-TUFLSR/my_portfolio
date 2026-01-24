@@ -42,11 +42,14 @@ const StarBackground = () => {
   useEffect(() => {
     generateStars();
     generateMeteors();
-    window.addEventListener("resize", generateStars);
 
-    return () => window.removeEventListener("resize", generateStars);
+    window.addEventListener("resize", generateStars);
+    window.addEventListener("resize", generateMeteors);
+
+    return () => window.removeEventListener("resize", generateStars, generateMeteors);
   }, []);
 
+  // fix meteors
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* STARS */}
